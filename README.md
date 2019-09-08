@@ -21,5 +21,19 @@ Don't let your virtualization management use more resources than your main virtu
     --http-socket localhost:3000 \
     --master
 
+# Usage
+
+    git clone https://github.com/cutelyst/Virtlyst.git
+
+    cd ./Virtlyst
+
+    docker build -t virtlyst .
+
+    docker run -itd --name virtlyst --restart always --net host virtlyst 
+
+    docker logs -f virtlyst
+
+Address : <Your server ip>:3000
 Default Username: admin
-Password: admin
+Password: 
+Execute "docker logs -f virtlyst" in the terminal, and find the password of the user after the character "Created user admin with password".

@@ -1,4 +1,4 @@
-FROM debian:stretch as builder
+FROM debian:stretch
 
 ARG CUTELYST_VERSION=v2.6.0
 ARG VIRTLYST_VERSION=v1.2.0
@@ -23,9 +23,6 @@ RUN apt-get update \
     && cmake . \
     && make
 
-FROM debian:stretch
-# Start with a clean image but keep compiled stuff
-COPY --from=builder /usr/local /usr/local
 WORKDIR /usr/local/src/Virtlyst
 
 RUN apt-get update \
