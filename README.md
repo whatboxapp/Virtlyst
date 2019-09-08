@@ -33,7 +33,10 @@ Don't let your virtualization management use more resources than your main virtu
 
     docker logs -f virtlyst
 
-Address : <Your server ip>:3000
+Address: Your-server-ip:3000
+
 Default Username: admin
-Password: 
+
+Password:
+
 Execute "docker logs -f virtlyst" in the terminal, and find the password of the user after the character "Created user admin with password".
